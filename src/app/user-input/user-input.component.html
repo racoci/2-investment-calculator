@@ -2,28 +2,31 @@
   <div class="input-group" >
     <p>
       <label for="initial-investment">Initial Investment</label>
-      <input type="text" id="initial-investment" name="title" />
+      <input
+        type="text"
+        id="initial-investment"
+        name="Initial Investment" [(ngModel)]="initialInvestment" />
     </p>
 
     <p>
       <label for="annual-investment">Annual Investment</label>
-      <input type="text" id="annual-investment" name="title" />
+      <input type="text" id="annual-investment" name="Annual Investment" [(ngModel)]="annualInvestment"/>
     </p>
   </div>
 
   <div class="input-group" >
     <p>
       <label for="expected-return">Initial Investment</label>
-      <input type="text" id="expected-return" name="title" />
+      <input type="text" id="expected-return" name="Expected Return" [(ngModel)]="expectedReturn"/>
     </p>
 
     <p>
       <label for="duration">Initial Investment</label>
-      <input type="text" id="duration" name="title" />
+      <input type="text" id="duration" name="Duration" [(ngModel)]="duration" />
     </p>
   </div>
 
   <p class="actions">
-    <button type="submit">Calculate</button>
+    <button [disabled]="hasMissingFields()" (click)="onUpdate($event)" type="submit">Calculate</button>
   </p>
 </form>

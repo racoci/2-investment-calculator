@@ -1,4 +1,4 @@
 <app-header />
-<app-user-input />
-<app-investment-results />
+<app-user-input (userInputChange)="userInput=$event" />
+<app-investment-results *ngIf="userInput" [userInput]="userInput"/>
 

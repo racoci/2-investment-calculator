@@ -9,26 +9,12 @@
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <th>1</th>
-    <th>$ 10,700.00</th>
-    <th>$600.00</th>
-    <th>$600.00</th>
-    <th>$10,100.00</th>
-  </tr>
-  <tr>
-    <th>1</th>
-    <th>$ 10,700.00</th>
-    <th>$600.00</th>
-    <th>$600.00</th>
-    <th>$10,100.00</th>
-  </tr>
-  <tr>
-    <th>1</th>
-    <th>$ 10,700.00</th>
-    <th>$600.00</th>
-    <th>$600.00</th>
-    <th>$10,100.00</th>
+  <tr *ngFor="let annualResult of computeAnnualResults()" >
+    <th>{{annualResult.year}}</th>
+    <th>${{annualResult.interest}}</th>
+    <th>${{annualResult.totalInterest}}</th>
+    <th>${{annualResult.valueEndOfYear}}</th>
+    <th>${{annualResult.totalAmountInvested}}</th>
   </tr>
   </tbody>
 </table>
