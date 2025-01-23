@@ -12,19 +12,19 @@ import {UserInputData} from "./user-input.data";
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  initialInvestment?: number;
-  annualInvestment?: number;
-  expectedReturn?: number;
-  duration?: bigint;
+  initialInvestment = '0';
+  annualInvestment = '0';
+  expectedReturn = '5';
+  duration = '10';
   @Output() userInputChange = new EventEmitter<UserInputData>()
 
-  onUpdate(event: MouseEvent) {
+  emitInputChange() {
     if (this.initialInvestment && this.annualInvestment && this.expectedReturn && this.duration) {
       this.userInputChange.emit({
-        initialInvestment: this.initialInvestment,
-        annualInvestment: this.annualInvestment,
-        expectedReturn: this.expectedReturn,
-        duration: this.duration
+        initialInvestment: +this.initialInvestment,
+        annualInvestment: +this.annualInvestment,
+        expectedReturn: +this.expectedReturn,
+        duration: +this.duration
       })
     }
   }

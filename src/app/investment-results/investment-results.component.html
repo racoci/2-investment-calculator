@@ -9,12 +9,12 @@
     </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let annualResult of computeAnnualResults()" >
+  <tr *ngFor="let annualResult of annualResults" >
     <th>{{annualResult.year}}</th>
-    <th>${{annualResult.interest}}</th>
-    <th>${{annualResult.totalInterest}}</th>
-    <th>${{annualResult.valueEndOfYear}}</th>
-    <th>${{annualResult.totalAmountInvested}}</th>
+    <th>${{annualResult.valueEndOfYear | currency}}</th>
+    <th>${{annualResult.interest | currency}}</th>
+    <th>${{annualResult.totalInterest | currency}}</th>
+    <th>${{annualResult.totalAmountInvested | currency}}</th>
   </tr>
   </tbody>
 </table>
