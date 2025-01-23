@@ -1,4 +1,4 @@
-export interface AnnualResults {
+export interface InvestmentResult {
   year: number;
   interest: number;
   valueEndOfYear: number;

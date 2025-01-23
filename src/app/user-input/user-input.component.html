@@ -58,7 +58,7 @@
   <p class="actions">
     <button
       [disabled]="hasMissingFields()"
-      (click)="emitInputChange()"
+      (click)="computeNewResults()"
       type="submit"
     >
       Calculate

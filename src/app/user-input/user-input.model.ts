@@ -1,4 +1,4 @@
-export interface UserInputData {
+export interface UserInputModel {
   initialInvestment: number;
   annualInvestment: number;
   expectedReturn: number;
